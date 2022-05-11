@@ -11,8 +11,8 @@ class User(db.Model):
     items = db.relationship('item', backref = 'owned_user', lazy = True)
 
 
-    # def __repr__(self):
-    #     return f'item {self.username}'
+    def __repr__(self):
+        return f'item {self.username}'
 
 class item(db.Model):
     id = db.Column(db.Integer(), primary_key = True)
